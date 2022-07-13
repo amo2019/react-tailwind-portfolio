@@ -21,7 +21,6 @@ function Home() {
    <Suspense fallback={<Spinner />}>
       <ContactMe />
    </Suspense>
-
     </>
   )
 }

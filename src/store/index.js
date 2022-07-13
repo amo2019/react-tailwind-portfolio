@@ -773,7 +773,7 @@ export const projectsData = [
           id: uuidv4(),
           name: "Demo",
           icon: "Demo",
-          url: "https://github.com/amo2019/surveying-app",
+          url: "https://react-redux-survey-app.herokuapp.com",
         },
       ],
     },

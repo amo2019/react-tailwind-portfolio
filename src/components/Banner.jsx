@@ -10,7 +10,7 @@ function Banner() {
       items-center
       sm:flex-row
       mt-12
-      sm:mt-10  pl-10
+      sm:mt-10  pr-5
     "
   >
     <div className="flex flex-col justify-center content-around flex-wrap w-full md:w-1/3 text-left sm:mt-10 pt-10 lg:pt-0">
@@ -68,7 +68,8 @@ function Banner() {
             mt-6
             mb-6
             sm:mb-0
-            text-lg
+            text-lg 
+            xsm:text-sm
             duration-600
           "
           aria-label="Download Resume"

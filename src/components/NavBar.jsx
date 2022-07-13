@@ -44,7 +44,7 @@ function NavBar() {
           className="hidden md:flex space-x-10 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase"
         >
           <li className="hover:text-gray-500">
-            <a href="#">homepage</a>
+            <a href="/#">homepage</a>
           </li>
           <li className="hover:text-gray-500">
             <a href="#resume">resume</a>

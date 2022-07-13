@@ -40,7 +40,7 @@ function RelatedProjects({id, setShowModal, setImage}) {
           <div className="mb-10 sm:mb-0" onClick={()=>handleClick(item.img)} key={item.id}>
             <img
             src={item.img}
-            className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+            className="rounded-xl cursor-pointer shadow-lg sm:shadow-none xsm:max-w-min resize h-auto"
             alt={item.title}
             />
            </div>

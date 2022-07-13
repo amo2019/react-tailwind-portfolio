@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
 function ProjectsFilter({setSelectedProject}) {
-    const [selectOptions, setSelectOptions ] = useState([
+    const [selectOptions, ] = useState([
           "Web Application",
           "Mobile Application",
           "UI/UX Design",
         ]);
   return (
-    <div className="px-4 flex space-around">
+    <div className="px-1 flex space-around">
   <select
     onChange={(event)=>{setSelectedProject(event.target.value)}}
     name="select"

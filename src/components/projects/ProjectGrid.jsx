@@ -1,6 +1,5 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import feather from "feather-icons";
 import {projectsData} from '../../store/index'
 import ProjectsFilter from './ProjectsFilter';
 
@@ -46,14 +45,10 @@ function ProjectGrid() {
       filterProjectsBySearch();
     },[searchProject])
 
-      const mounted = ()=> {
-        feather.replace();
-      }
-
       const  displayProjects = () => {
         return filteredProjects().map(project => {
             return (
-              <div
+              <Link to={`/projects/${project.id}`}
                 key={project.id}
                 className="
                   rounded-md
@@ -92,13 +87,11 @@ function ProjectGrid() {
                     </div>
                 </div>
             </div>
-                  <Link to={`/projects/${project.id}`}>
                   <img
                   src={project.img}
                   alt={project.title}
-                  className="min-h-full object-fit cursor-pointer rounded-sm hover:scale-102 transition duration-300 ease-in-out"
+                  className="min-h-full object-fit cursor-pointer rounded-sm hover:scale-102 transition duration-300 ease-in-out xsm:max-w-min h-auto resize"
                   />
-                  </Link>
         </div>
 
                 </div>
@@ -124,7 +117,7 @@ function ProjectGrid() {
                     >
                   </div>
               </div>
-              </div>
+              </Link>
             )
         })
     }
@@ -173,17 +166,16 @@ function ProjectGrid() {
            dark:bg-slate-900
         "
       >
-        Search projects by title or filter by category
+        Search by title or filter by category
       </h3>
       <div
         className="
-          flex
+          flex flex-col items-center 
           justify-between
           border-b border-primary-light
           dark:border-secondary-dark
           pb-3
-          gap-3
-        "
+          gap-2 lg:flex-row md:flex-row"
         >
         <div className="flex justify-between gap-3 mr-5">
           <span

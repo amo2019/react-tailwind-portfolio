@@ -40,7 +40,7 @@ function getOrderData(){
     cursorRequest.onsuccess = function(evt) {                    
       var cursor = evt.target.result;
       if (cursor) {
-        console.log("cursor.value", cursor.value)
+       // console.log("cursor.value", cursor.value)
           sendTableOrder(cursor.value, cursor.key)
           cursor.continue();
       }

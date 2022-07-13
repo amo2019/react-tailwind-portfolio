@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react'
-import RelatedProjects, {data} from "./RelatedProjects";
-import {projectsData, getters} from "../../store/index";
+import React, { useState } from 'react'
+import RelatedProjects from "./RelatedProjects";
+import { getters} from "../../store/index";
 import { NavLink, useParams } from "react-router-dom";
 import MyModal from "../modal/Modal";
 
@@ -68,45 +68,6 @@ function Project() {
                <RelatedProjects showModal={showModal} id={project.id} setShowModal={setShowModal} setImage={setImage} />
              <div className="block sm:flex gap-0 sm:gap-10 mt-2">
                <div className="w-full sm:w-1/3 text-left">
-{/*                  <div className="mb-7">
-                  <p
-                     className="
-                       font-general-medium
-                       text-2xl text-secondary-dark
-                       dark:text-secondary-light
-                       mb-2
-                     "
-                   >
-                     { project.clientTitle }
-                   </p>
-                    <ul className="leading-loose">
-                    {project.companyInfos.map((info)=>{
-                      return  (
-                    <li
-                    key={info.id}
-                    className="
-                      font-general-regular
-                      text-ternary-dark
-                      dark:text-white
-                    "
-                  >
-                    <span>{ info.title }: </span>
-                    <a
-                      href="#"
-                      className={
-                        info.title == 'Website' || info.title == 'Phone'
-                          ? 'hover:underline cursor-pointer'
-                          : ''
-                      }
-                      aria-label="Project website and phone"
-                      >{ info.details }</a
-                    >
-                  </li>
-                  )
-                    })}
- 
-                   </ul> 
-                 </div>  */}
        
                  <div className="mb-7">
                    <p
@@ -232,6 +193,8 @@ function Project() {
                         dark:text-white
                         "
                         key={projectShare.id}
+                        target="_blank" 
+                        rel="noopener noreferrer"
                         >
                         <div className="b mx-auto justify-around h-8 w-24 flex items-center  text-white hover:text-black">
                           <div className="i h-8 w-24 bg-gradient-to-br from-yellow-400 to-yellow-600 items-center rounded-full shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out">
@@ -245,7 +208,7 @@ function Project() {
 
                </div>
              </div>
-          <NavLink to="/#works" className='min-h-fit flex justify-center mb-3'>
+        <NavLink to="/#works" className='min-h-fit flex justify-center mb-3'>
            <div className="mt-2 justify-around h-8 w-24 flex items-center  text-black hover:text-white">
                <div className="i h-8 w-24 bg-gradient-to-br from-yellow-400 to-yellow-600 items-center rounded-full shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out">
                </div>
